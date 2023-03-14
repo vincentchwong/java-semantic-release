@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.1.0](https://github.com/vincentchwong/java-semantic-release/compare/v1.0.0...v1.1.0) (2023-03-14)
+
+
+### Features
+
+* **main:** test feature ([1698055](https://github.com/vincentchwong/java-semantic-release/commit/1698055e8deb8df75f0b15e59ebfd27a957d6364)), closes [#1](https://github.com/vincentchwong/java-semantic-release/issues/1)
+
 # 1.0.0 (2023-03-13)
 
 
