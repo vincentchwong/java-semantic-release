@@ -1,5 +1,19 @@
 # Semantic Versioning Changelog
 
+# [2.0.0](https://github.com/vincentchwong/java-semantic-release/compare/v1.1.0...v2.0.0) (2023-03-14)
+
+
+### Code Refactoring
+
+* test ([a2e3bfc](https://github.com/vincentchwong/java-semantic-release/commit/a2e3bfc5860acf7cbc12dd589775f3a60a552bac))
+
+
+### BREAKING CHANGES
+
+* refactor app
+
+something break and need changes
+
 # [1.1.0](https://github.com/vincentchwong/java-semantic-release/compare/v1.0.0...v1.1.0) (2023-03-14)
 
 
