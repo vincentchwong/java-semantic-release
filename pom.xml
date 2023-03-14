@@ -40,10 +40,48 @@
 	<build>
 		<plugins>
 			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>buildnumber-maven-plugin</artifactId>
+				<version>3.0.0</version>
+				<executions>
+					<execution>
+						<id>create-build-number</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>create</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>generate-build-properties</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>create-metadata</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<shortRevisionLength>5</shortRevisionLength>
+					<doCheck>false</doCheck>
+					<doUpdate>false</doUpdate>
+
+					<attach>true</attach>
+					<!--make it available for jar/war classpath resource -->
+					<addOutputDirectoryToResources>true</addOutputDirectoryToResources>
+					<outputName>build.properties</outputName>
+					<properties>
+						<artifactId>${project.artifactId}</artifactId>
+						<description>${project.description}</description>
+					</properties>	
+				</configuration>
+			</plugin>
+
+			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+
+		<finalName>${project.artifactId}-${project.version}-r${buildNumber}</finalName>
 	</build>
 
 </project>
